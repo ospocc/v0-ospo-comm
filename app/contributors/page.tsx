@@ -157,7 +157,7 @@ export default function ContributorsPage() {
                   </p>
                   <div className="flex gap-3">
                     <Button asChild>
-                      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                      <a href="https://github.com/bayoss/" target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h-4 w-4" />
                         访问 GitHub
                         <ExternalLink className="ml-2 h-4 w-4" />

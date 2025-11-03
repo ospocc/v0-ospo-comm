@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Mail, Twitter } from "lucide-react"
+import { Github, Twitter } from "lucide-react"
 
 export function SiteFooter() {
   return (
@@ -63,14 +63,11 @@ export function SiteFooter() {
           <div>
             <h3 className="mb-4 text-lg font-semibold">联系我们</h3>
             <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-foreground">
+              <a href="https://github.com/bayoss/" className="text-muted-foreground hover:text-foreground">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground">
+              <a href="https://x.com/nodex" className="text-muted-foreground hover:text-foreground">
                 <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground">
-                <Mail className="h-5 w-5" />
               </a>
             </div>
           </div>

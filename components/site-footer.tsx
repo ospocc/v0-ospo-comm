@@ -44,7 +44,7 @@ export function SiteFooter() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/resources" className="text-muted-foreground hover:text-foreground">
-                  图书与报告
+                  项目与图书报告
                 </Link>
               </li>
               <li>
@@ -63,7 +63,7 @@ export function SiteFooter() {
           <div>
             <h3 className="mb-4 text-lg font-semibold">联系我们</h3>
             <div className="flex gap-4">
-              <a href="https://github.com/bayoss/" className="text-muted-foreground hover:text-foreground">
+              <a href="https://github.com/ospocc/" className="text-muted-foreground hover:text-foreground">
                 <Github className="h-5 w-5" />
               </a>
               <a href="https://x.com/nodex" className="text-muted-foreground hover:text-foreground">

@@ -2,7 +2,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { BookOpen, FileText, ExternalLink } from "lucide-react"
+import { BookOpen, FileText, ExternalLink, Rocket, Smile, Github, Check } from "lucide-react"
 import { resourcesData } from "@/data/resources"
 
 export default function ResourcesPage() {
@@ -14,12 +14,89 @@ export default function ResourcesPage() {
         <div className="border-b border-border bg-muted/50 py-12">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl font-bold tracking-tight text-balance">OSPO 图书与报告</h1>
-            <p className="mt-4 text-lg text-muted-foreground text-pretty">获取权威的 OSPO 相关书籍、研究报告和白皮书</p>
+            <p className="mt-4 text-lg text-muted-foreground text-pretty">
+              获取权威的 OSPO 相关书籍、研究报告和实用资源
+            </p>
           </div>
         </div>
 
         <div className="container mx-auto px-4 py-12">
           <div className="mx-auto max-w-6xl space-y-12">
+            <section>
+              <div className="mb-6 flex items-center gap-3">
+                <Rocket className="h-6 w-6 text-primary" />
+                <h2 className="text-2xl font-bold tracking-tight">社区开源项目</h2>
+              </div>
+              <div className="grid gap-6 md:grid-cols-2">
+                {resourcesData.projects.map((project) => (
+                  <Card
+                    key={project.name}
+                    className="border-primary/30 bg-gradient-to-br from-primary/5 to-transparent"
+                  >
+                    <CardHeader>
+                      <div className="mb-2 flex items-start justify-between gap-4">
+                        <CardTitle className="text-lg">{project.name}</CardTitle>
+                        <span className="shrink-0 rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
+                          {project.category}
+                        </span>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="mb-4 text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+
+                      {/* 显示项目特性 */}
+                      {project.features && (
+                        <div className="mb-4 flex flex-wrap gap-2">
+                          {project.features.map((feature) => (
+                            <span
+                              key={feature}
+                              className="inline-flex items-center gap-1 rounded-md bg-muted px-2 py-1 text-xs"
+                            >
+                              <Check className="h-3 w-3 text-primary" />
+                              {feature}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* 显示表情包版本 */}
+                      {project.versions && (
+                        <div className="mb-4 space-y-2">
+                          <p className="text-xs font-medium text-foreground">可用版本：</p>
+                          <div className="grid grid-cols-2 gap-2">
+                            {project.versions.map((version) => (
+                              <div key={version.name} className="rounded-md bg-muted p-2">
+                                <div className="flex items-center gap-1.5">
+                                  <Smile className="h-3.5 w-3.5 text-primary" />
+                                  <span className="text-xs font-medium">{version.name}</span>
+                                </div>
+                                <p className="mt-1 text-xs text-muted-foreground">{version.description}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {project.url !== "#" ? (
+                        <Button variant="outline" size="sm" asChild>
+                          <a href={project.url} target="_blank" rel="noopener noreferrer">
+                            <Github className="mr-2 h-4 w-4" />
+                            查看项目
+                          </a>
+                        </Button>
+                      ) : (
+                        <Button variant="outline" size="sm">
+                          即将发布
+                          <ExternalLink className="ml-2 h-3 w-3" />
+                        </Button>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </section>
+
+            {/* 推荐书籍 */}
             <section>
               <div className="mb-6 flex items-center gap-3">
                 <BookOpen className="h-6 w-6 text-primary" />
@@ -49,6 +126,7 @@ export default function ResourcesPage() {
               </div>
             </section>
 
+            {/* 报告 */}
             <section>
               <div className="mb-6 flex items-center gap-3">
                 <FileText className="h-6 w-6 text-primary" />
@@ -78,6 +156,7 @@ export default function ResourcesPage() {
               </div>
             </section>
 
+            {/* 实用工具 */}
             <section>
               <h2 className="mb-6 text-2xl font-bold tracking-tight">实用工具</h2>
               <div className="grid gap-4 md:grid-cols-3">
@@ -99,6 +178,7 @@ export default function ResourcesPage() {
               </div>
             </section>
 
+            {/* 学习路径建议 */}
             <section>
               <Card>
                 <CardHeader>
@@ -115,6 +195,7 @@ export default function ResourcesPage() {
               </Card>
             </section>
 
+            {/* 持续更新中 */}
             <section>
               <Card className="border-primary/50 bg-gradient-to-br from-primary/5 to-primary/10">
                 <CardContent className="flex flex-col items-center gap-4 p-8 text-center">

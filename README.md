@@ -4,7 +4,7 @@
 
 ## 项目结构
 
-```
+\`\`\`
 ├── app/                    # Next.js 应用页面
 │   ├── introduction/       # OSPO 简介
 │   ├── organization/       # 组织形式
@@ -22,7 +22,7 @@
 │   ├── links.ts          # 链接数据
 │   └── contributors.ts   # 贡献者数据
 └── components/           # React 组件
-```
+\`\`\`
 
 ## 如何贡献
 

@@ -1,4 +1,26 @@
 export const resourcesData = {
+  projects: [
+    {
+      name: "OSPO 网站开源项目",
+      description:
+        "为新兴 OSPO 团队提供网站参考模板，帮助其快速启动 OSPO 门户网站建设。基于 Next.js 构建，支持数据与展示分离，便于社区协作维护。",
+      url: "https://github.com/ospocc/v0-ospo",
+      category: "网站模板",
+      features: ["开箱即用", "数据分离", "响应式设计", "社区驱动"],
+    },
+    {
+      name: "OSPO 微信表情包",
+      description: "一组 OSPO 与开源主题的微信表情包，为开源社区交流增添趣味。适用于日常沟通、社区活动宣传等场景。",
+      url: "#",
+      category: "社区资源",
+      versions: [
+        { name: "基础版", description: "通用表情包，适合日常交流" },
+        { name: "开源版", description: "开源文化主题表情" },
+        { name: "OSPO版", description: "OSPO 工作场景专属表情" },
+        { name: "OSPO英文版", description: "面向国际社区的英文版本" },
+      ],
+    },
+  ],
   books: [
     {
       title: "The Open Source Way",

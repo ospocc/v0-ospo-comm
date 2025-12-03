@@ -14,7 +14,7 @@ export function SiteHeader() {
     { href: "/organization", label: "组织形式" },
     { href: "/operations", label: "职责与运营" },
     { href: "/cases", label: "案例研究" },
-    { href: "/resources", label: "图书与报告" },
+    { href: "/resources", label: "资源中心" },
     { href: "/community", label: "社区与组织" },
     { href: "/links", label: "友情链接" },
     { href: "/contributors", label: "贡献榜" },

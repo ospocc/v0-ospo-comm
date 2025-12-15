@@ -23,17 +23,20 @@ export const resourcesData = {
         {
           name: "开源版",
           description: "开源文化主题表情",
-          status: "待上架",
+          url: "https://w.url.cn/s/AsgIXzk",
+          note: "请在手机微信中打开",
         },
         {
           name: "OSPO版",
           description: "OSPO 工作场景专属表情",
-          status: "待上架",
+          url: "https://w.url.cn/s/AlckGiA",
+          note: "请在手机微信中打开",
         },
         {
           name: "OSPO英文版",
           description: "面向国际社区的英文版本",
-          status: "待上架",
+          url: "https://w.url.cn/s/AXPlvIo",
+          note: "请在手机微信中打开",
         },
       ],
     },

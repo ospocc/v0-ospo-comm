@@ -162,9 +162,11 @@ export default function ResourcesPage() {
                     </CardHeader>
                     <CardContent>
                       <p className="mb-4 text-sm text-muted-foreground leading-relaxed">{report.description}</p>
-                      <Button variant="outline" size="sm">
-                        下载报告
-                        <ExternalLink className="ml-2 h-3 w-3" />
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={report.url} target="_blank" rel="noopener noreferrer">
+                          下载报告
+                          <ExternalLink className="ml-2 h-3 w-3" />
+                        </a>
                       </Button>
                     </CardContent>
                   </Card>
@@ -184,9 +186,11 @@ export default function ResourcesPage() {
                     </CardHeader>
                     <CardContent>
                       <p className="mb-3 text-sm text-muted-foreground leading-relaxed">{tool.description}</p>
-                      <Button variant="ghost" size="sm" className="h-8 px-2">
-                        了解更多
-                        <ExternalLink className="ml-1 h-3 w-3" />
+                      <Button variant="ghost" size="sm" className="h-8 px-2" asChild>
+                        <a href={tool.url} target="_blank" rel="noopener noreferrer">
+                          了解更多
+                          <ExternalLink className="ml-1 h-3 w-3" />
+                        </a>
                       </Button>
                     </CardContent>
                   </Card>

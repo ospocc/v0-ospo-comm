@@ -101,7 +101,7 @@ export default function ResourcesPage() {
                         </Button>
                       ) : (
                         <Button variant="outline" size="sm" disabled>
-                          敬请期待
+                          欢迎关注
                         </Button>
                       )}
                     </CardContent>

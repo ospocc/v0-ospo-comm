@@ -43,28 +43,46 @@ export const resourcesData = {
   ],
   books: [
     {
+      title: "OSPO Book | OSPO 指南",
+      author: "TODO Group",
+      description: "为各类型的组织提供了一份OSPO知识参考",
+      type: "在线书籍",
+      url: "https://ospobook.todogroup.org/zh/",
+    },
+    {
+      title: "The Good Governance Handbook | 开源治理良策",
+      author: "GGI",
+      description: "OSPO 联盟开发并维护的 OSS 良好治理倡议（或 GGI）蓝图",
+      type: "在线书籍",
+      url: "https://ospo-alliance.org/ggi/zh_hans/",
+    },
+    {
       title: "The Open Source Way",
       author: "Red Hat",
       description: "全面介绍开源社区的运作方式和最佳实践",
       type: "在线书籍",
+      url: "https://www.theopensourceway.org/",
     },
     {
       title: "Open Source Program Office Guide",
       author: "TODO Group",
       description: "OSPO 建设和运营的权威指南",
       type: "指南",
+      url: "https://todogroup.org/resources/guides/",
     },
     {
       title: "Managing Open Source Projects",
       author: "Linux Foundation",
       description: "开源项目管理的实用手册",
       type: "手册",
+      url: "https://www.linuxfoundation.org/resources/open-source-guides",
     },
     {
       title: "Open Source Compliance in the Enterprise",
       author: "Ibrahim Haddad",
       description: "企业开源合规管理的深度解析",
       type: "专著",
+      url: "https://www.linuxfoundation.org/research/open-source-compliance-in-the-enterprise",
     },
   ],
   reports: [

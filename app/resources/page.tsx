@@ -130,9 +130,11 @@ export default function ResourcesPage() {
                     </CardHeader>
                     <CardContent>
                       <p className="mb-4 text-sm text-muted-foreground leading-relaxed">{book.description}</p>
-                      <Button variant="outline" size="sm">
-                        查看详情
-                        <ExternalLink className="ml-2 h-3 w-3" />
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={book.url} target="_blank" rel="noopener noreferrer">
+                          查看详情
+                          <ExternalLink className="ml-2 h-3 w-3" />
+                        </a>
                       </Button>
                     </CardContent>
                   </Card>

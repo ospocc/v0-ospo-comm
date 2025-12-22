@@ -36,9 +36,11 @@ export default function CommunityPage() {
                       </CardHeader>
                       <CardContent>
                         <p className="mb-4 text-sm text-muted-foreground leading-relaxed">{community.description}</p>
-                        <Button variant="outline" size="sm">
-                          访问网站
-                          <ExternalLink className="ml-2 h-3 w-3" />
+                        <Button variant="outline" size="sm" asChild>
+                          <a href={community.url} target="_blank" rel="noopener noreferrer">
+                            访问网站
+                            <ExternalLink className="ml-2 h-3 w-3" />
+                          </a>
                         </Button>
                       </CardContent>
                     </Card>
@@ -58,9 +60,11 @@ export default function CommunityPage() {
                     </CardHeader>
                     <CardContent>
                       <p className="mb-4 text-sm text-muted-foreground leading-relaxed">{community.description}</p>
-                      <Button variant="outline" size="sm">
-                        了解更多
-                        <ExternalLink className="ml-2 h-3 w-3" />
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={community.url} target="_blank" rel="noopener noreferrer">
+                          了解更多
+                          <ExternalLink className="ml-2 h-3 w-3" />
+                        </a>
                       </Button>
                     </CardContent>
                   </Card>
@@ -82,7 +86,13 @@ export default function CommunityPage() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{event.description}</p>
+                      <p className="mb-3 text-sm text-muted-foreground leading-relaxed">{event.description}</p>
+                      <Button variant="link" size="sm" className="h-auto p-0" asChild>
+                        <a href={event.url} target="_blank" rel="noopener noreferrer">
+                          查看活动详情
+                          <ExternalLink className="ml-1 h-3 w-3" />
+                        </a>
+                      </Button>
                     </CardContent>
                   </Card>
                 ))}

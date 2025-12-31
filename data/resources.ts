@@ -170,7 +170,7 @@ export const resourcesData = {
       name: "开源战略模拟器",
       description: "帮助组织规划和模拟开源战略的互动工具",
       category: "战略",
-      url: "https://opensource-europe.org/open-source-strategy-simulator/",
+      url: "https://opensource-europe.org/",
     },
   ],
   learningPaths: [
